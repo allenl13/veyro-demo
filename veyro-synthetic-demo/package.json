@@ -1,0 +1,42 @@
+{
+  "name": "veyro-synthetic-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "demo:seed": "node --experimental-strip-types scripts/seed-demo.mjs",
+    "build": "npm run demo:seed && vite build",
+    "preview": "node scripts/serve.mjs --preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint app lib demo scripts tests vite.config.ts",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "verify:release": "npm run demo:seed && npm run typecheck && npm run lint && npm test && npm run build && node scripts/check-release.mjs",
+    "verify:live": "node scripts/check-live.mjs",
+    "release:archive": "node scripts/package-release.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.4",
+    "@tailwindcss/postcss": "4.2.1",
+    "@types/node": "22.19.19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.2",
+    "eslint": "9.39.4",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "16.4.0",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.59.3",
+    "vite": "8.0.16"
+  }
+}
