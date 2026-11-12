@@ -7,7 +7,7 @@ Veyro is an explainable company-research interface with a simulated portfolio. T
 
 ## Download the source
 
-The complete reviewed source is packaged in [veyro-synthetic-demo-0.1.0.zip](./veyro-synthetic-demo-0.1.0.zip). It contains the application, synthetic fixtures, 141 tests, documentation and a file manifest. This repository currently distributes the source archive rather than an unpacked source tree.
+The complete reviewed source is packaged in [veyro-synthetic-demo-0.1.0.zip](./veyro-synthetic-demo-0.1.0.zip). It contains the application, synthetic fixtures, 141 tests, documentation and a file manifest. The same reviewed source is now directly browsable in [veyro-synthetic-demo/](veyro-synthetic-demo/). You can clone this repository and run the commands below from that folder, or use the ZIP.
 
 Download and extract the ZIP, then open a terminal inside the extracted `veyro-synthetic-demo` folder. The commands below run from that folder. The archive SHA-256 is recorded in [SHA256SUMS](./SHA256SUMS).
 
@@ -43,7 +43,7 @@ The clock is frozen at **30 June 2026, 20:05 UTC**. Price labels use New York ti
 
 ## Validation and scope
 
-`npm run verify:release` runs type checking, lint, the retained regression tests and new demo-boundary tests, production build, and the source allowlist/privacy checks. See validation evidence (`docs/VALIDATION.md` inside the source ZIP), architecture (`docs/ARCHITECTURE.md` inside the source ZIP), limitations (`docs/LIMITATIONS.md` inside the source ZIP) and source adaptation inventory (`docs/SOURCE_SCOPE.md` inside the source ZIP).
+`npm run verify:release` runs type checking, lint, the retained regression tests and new demo-boundary tests, production build, and the source allowlist/privacy checks. See validation evidence (`docs/VALIDATION.md` in veyro-synthetic-demo/ and the source ZIP), architecture (`docs/ARCHITECTURE.md` in veyro-synthetic-demo/ and the source ZIP), limitations (`docs/LIMITATIONS.md` in veyro-synthetic-demo/ and the source ZIP) and source adaptation inventory (`docs/SOURCE_SCOPE.md` in veyro-synthetic-demo/ and the source ZIP).
 
 The public candidate intentionally omits the private app's provider ingestion, Cloudflare/D1 deployment, local tracker service, account gates, owner operations and scheduled collection jobs. The `/api/*` contracts used by the interface are handled **inside the browser** by a read-only demo adapter; they are not an HTTP backend. This is a demonstration of the retained application and pure engine, not an installation of the original operational system.
 
@@ -51,9 +51,9 @@ This project demonstrates software engineering and evidence presentation. Its da
 
 ## Contribution, security and licensing
 
-Read `CONTRIBUTING.md` and `SECURITY.md` before extending the candidate. Dependency metadata and installed-package notices are recorded in the licence inventory (`docs/DEPENDENCIES.md` inside the source ZIP), the machine-readable inventory (`docs/dependency-inventory.json` inside the source ZIP) and `THIRD_PARTY_NOTICES.txt`.
+Read `CONTRIBUTING.md` and `SECURITY.md` before extending the candidate. Dependency metadata and installed-package notices are recorded in the licence inventory (`docs/DEPENDENCIES.md` in veyro-synthetic-demo/ and the source ZIP), the machine-readable inventory (`docs/dependency-inventory.json` in veyro-synthetic-demo/ and the source ZIP) and `THIRD_PARTY_NOTICES.txt`.
 
-No project-wide open-source licence is granted yet. The licence decision note (`docs/LICENCE_DECISION.md` inside the source ZIP) recommends MIT for the owner's consideration and explains the remaining rights review.
+No project-wide open-source licence is granted yet. The licence decision note (`docs/LICENCE_DECISION.md` in veyro-synthetic-demo/ and the source ZIP) recommends MIT for the owner's consideration and explains the remaining rights review.
 
 
 ## Current-source refresh
